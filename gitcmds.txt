@@ -1,0 +1,10 @@
+git init
+git clone "remote link"
+git update-git-for-windows ---> open gitbash terminal type this cmd to update git version in our windows machines
+git add -all & git add -A --> stage every single change across the project
+git add . --> stage changes within the current directory we are in
+git add * ---> stages all the changes except deleted ones
+git status
+git reset
+
+
