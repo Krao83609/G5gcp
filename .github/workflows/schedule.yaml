@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '*/5 * * * *'
 jobs:
   hello_world:
     runs-on: ubuntu-latest
@@ -8,7 +8,7 @@ jobs:
       - name: say hello world
         run: echo "the current server time is $(date)"
       - name: not on monday
-        if: github.event.schedule != '*/5 * * * *'
+        if: github.event.schedule != '*/ * * * *'
         run: echo "skip this run"
       - name: every 5 mins
         run: echo "run every 5 mins"
