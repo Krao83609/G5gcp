@@ -3,17 +3,17 @@ on:
   workflow_dispatch:
     inputs:
       name:
-      description: " name of the person to kill"
-      required: true
-      type: string
-    greetings:
-      description: "type of greeting"
-      required: true
-      type: string
-    data:
-      description: 'Bas64 encoded content of a file'
-      required: false
-      type: string
+        description: " name of the person to kill"
+        required: true
+        type: string
+      greetings:
+        description: "type of greeting"
+        required: true
+        type: string
+      data:
+        description: 'Bas64 encoded content of a file'
+        required: false
+        type: string
 
 jobs:
   greet:
