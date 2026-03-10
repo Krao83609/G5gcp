@@ -14,7 +14,7 @@ resource "google_storage_bucket" "auto-expire" {
 
   lifecycle_rule {
     condition {
-      age = 1
+      age = 2
     }
     action {
       type = "AbortIncompleteMultipartUpload"
