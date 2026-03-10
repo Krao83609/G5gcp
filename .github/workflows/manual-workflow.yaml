@@ -1,0 +1,33 @@
+name: manul workflow
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+      description: " name of the person to kill"
+      required: true
+      type: string
+    greetings:
+      description: "type of greeting"
+      required: true
+      type: string
+    data:
+      description: 'Bas64 encoded content of a file'
+      required: false
+      type: string
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: decode file content
+        run: | 
+          echo "${{ inputs.data }}" | base64 --decode >./decode.txt
+      - name:
+        run: |
+          echo "${{ inputs.greetings }}, ${{ inputs.name }}!"
+      - name: dispalay file content
+        run: | 
+          echo " contents of the file:"
+          cat ./decode.txt
+      
+      
